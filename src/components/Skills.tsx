@@ -34,6 +34,17 @@ const skillCategories = [
       "Data Analysis",
       "Technical Writing"
     ]
+  },
+  {
+    title: "Field Engineering",
+    skills: [
+      "Field Commissioning",
+      "Terminal Alignment",
+      "Hydraulic Systems",
+      "Non-Destructive Testing",
+      "Diesel Systems",
+      "Troubleshooting"
+    ]
   }
 ];
 
@@ -57,7 +68,7 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 sm:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 sm:px-0">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}

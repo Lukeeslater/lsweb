@@ -12,6 +12,27 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Angel Express 6P Chair",
+    description: "Assisted with commissioning of the Angel Express six-pack chairlift at Angel Fire Resort in New Mexico. Aligned the return terminal to support safety and ride quality, worked with the return's hydraulic tensioning unit, and helped troubleshoot issues as they arose. This project provided hands-on experience independently aligning a terminal. More info at <a href='https://www.angelfireresort.com/new-mexico-first-six-pack-chairlift-angel-express/' target='_blank' rel='noopener noreferrer' className='text-accent hover:text-accent/80 transition-colors duration-300'>Angel Fire Resort</a>.",
+    skills: ["Field Commissioning", "Terminal Alignment", "Hydraulic Systems", "Troubleshooting"],
+    duration: "July 2026",
+    image: "/images/projects/angelexpress.jpg"
+  },
+  {
+    title: "Sunlight Primo 4P Fixed Grip Chair",
+    description: "Aided in commissioning the Sunlight Primo 4-passenger fixed-grip chairlift near Glenwood Springs, Colorado. Troubleshot hydraulic systems, operated the terminal's diesel engine, and set the terminal brakes. More info at <a href='https://soprissun.com/sunlight-gets-a-face-lifts/' target='_blank' rel='noopener noreferrer' className='text-accent hover:text-accent/80 transition-colors duration-300'>The Sopris Sun</a>.",
+    skills: ["Field Commissioning", "Hydraulic Systems", "Diesel Systems", "Brake Setup"],
+    duration: "November 2025",
+    image: "/images/projects/sunlight_chair.jpg"
+  },
+  {
+    title: "Non-Destructive Testing of Chairlift Components",
+    description: "Aided in testing essential chairlift components using in-house non-destructive testing equipment. Oversaw testing operations, maintained required test conditions, and verified code compliance. Work included a dynamic test of component reliability approaching the infinite-life region, followed by a static test of yield and elastic behavior.",
+    skills: ["Non-Destructive Testing", "Dynamic Testing", "Static Testing", "Code Compliance"],
+    duration: "June 2025",
+    image: "/images/projects/nondestruct_test.jpg"
+  },
+  {
     title: "Portfolio Website Development",
     description: "Designed and developed a modern, responsive portfolio website using React, TypeScript, and Tailwind CSS. Leveraged Cursor's AI-powered development environment for enhanced productivity and code quality. Implemented smooth animations and a clean, professional design.",
     skills: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Cursor AI"],
