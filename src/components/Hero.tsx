@@ -33,7 +33,7 @@ export default function Hero() {
               <img
                 src="/images/profile.jpg"
                 alt="Luke Slater"
-                className="w-full h-full object-cover object-[center_20%]"
+                className="w-full h-full object-cover object-center"
               />
             </motion.div>
           </div>
