@@ -3,6 +3,18 @@ import { motion } from 'framer-motion';
 
 const leadershipRoles = [
   {
+    title: "Mechanical Engineer",
+    organization: "Leitner-Poma of America",
+    location: "Grand Junction, CO",
+    period: "Jun. 2025 - Present",
+    responsibilities: [
+      "Commission chairlift terminals, including alignment, hydraulics, and field troubleshooting",
+      "Support non-destructive testing of critical lift components to code requirements",
+      "Approach each project and issue with humility and encourage collaboration across the crew",
+      "Building toward management and more responsible project roles"
+    ]
+  },
+  {
     title: "Senior Capstone Project Manager",
     organization: "Western-CU Boulder Engineering Partnership Program",
     location: "Gunnison, CO",
@@ -50,7 +62,7 @@ export default function Leadership() {
             LEADERSHIP & AFFILIATIONS
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Experience in leading teams and engaging with professional organizations.
+            Leading with humility and collaboration — on the job, in school, and in the community.
           </p>
         </motion.div>
 
@@ -99,8 +111,34 @@ export default function Leadership() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8 text-white">Professional Affiliations</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white">How I Lead</h3>
             <div className="space-y-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="group bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/10 hover:border-accent/20"
+              >
+                <h4 className="text-xl font-bold text-white group-hover:text-accent transition-colors duration-300 mb-4">
+                  Humility and Collaboration
+                </h4>
+                <p className="text-gray-300 leading-relaxed">
+                  I have found it essential to approach every project, issue, or decision with humility and to encourage
+                  collaboration. That mindset is something I am carrying into more responsible roles. A lot of it clicked
+                  after reading{' '}
+                  <a
+                    href="https://danielcoyle.com/the-culture-code/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 transition-colors duration-300"
+                  >
+                    The Culture Code
+                  </a>{' '}
+                  by Daniel Coyle.
+                </p>
+              </motion.div>
+              <h3 className="text-2xl font-bold text-white pt-4">Professional Affiliations</h3>
               {affiliations.map((affiliation, index) => (
                 <motion.div
                   key={affiliation.organization}

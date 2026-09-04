@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { NavLink, Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { name: 'HOME', href: 'home' },
-  { name: 'ABOUT', href: 'about' },
-  { name: 'PROJECTS', href: 'projects' },
-  { name: 'SKILLS', href: 'skills' },
-  { name: 'LEADERSHIP', href: 'leadership' },
-  { name: 'CONTACT', href: 'contact' },
+  { name: 'HOME', path: '/' },
+  { name: 'ABOUT', path: '/about' },
+  { name: 'PROJECTS', path: '/projects' },
+  { name: 'LEADERSHIP', path: '/leadership' },
+  { name: 'CONTACT', path: '/contact' },
 ];
 
 export default function Navbar() {
@@ -25,24 +24,27 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `text-sm tracking-[0.2em] cursor-pointer transition-colors duration-300 ${
+      isActive ? 'text-accent' : 'text-white hover:text-gray-300'
+    }`;
+
+  const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
+    `block text-base tracking-[0.2em] cursor-pointer transition-colors duration-300 ${
+      isActive ? 'text-accent' : 'text-white hover:text-gray-300'
+    }`;
+
   return (
-    <nav 
+    <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'
+        scrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-black/40 backdrop-blur-sm'
       }`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24">
           <div className="flex items-center">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-64}
-              duration={500}
-              className="cursor-pointer"
-            >
-              <motion.div 
+            <Link to="/" className="cursor-pointer">
+              <motion.div
                 className="relative flex items-center justify-center w-12 h-12 bg-accent/90 rounded-lg overflow-hidden group hover:bg-accent transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -52,41 +54,26 @@ export default function Navbar() {
               </motion.div>
             </Link>
           </div>
-          
-          {/* Desktop menu */}
+
           <div className="hidden sm:flex sm:items-center sm:space-x-10">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                spy={true}
-                smooth={true}
-                offset={-64}
-                duration={500}
-                className="text-sm text-white hover:text-gray-300 tracking-[0.2em] cursor-pointer transition-colors duration-300"
-              >
+              <NavLink key={item.path} to={item.path} end={item.path === '/'} className={linkClass}>
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
           </div>
 
-          {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-gray-300 transition-colors"
             >
-              {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
+              {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -98,18 +85,15 @@ export default function Navbar() {
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  spy={true}
-                  smooth={true}
-                  offset={-64}
-                  duration={500}
-                  className="block text-base text-white hover:text-gray-300 tracking-[0.2em] cursor-pointer transition-colors duration-300"
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  end={item.path === '/'}
+                  className={mobileLinkClass}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </motion.div>
@@ -117,4 +101,4 @@ export default function Navbar() {
       </AnimatePresence>
     </nav>
   );
-} 
+}

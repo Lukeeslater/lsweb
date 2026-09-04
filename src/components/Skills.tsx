@@ -9,6 +9,8 @@ const skillCategories = [
       "MATLAB",
       "Python",
       "C++",
+      "Linux",
+      "Cursor",
       "GitHub",
       "Microsoft Project"
     ]
@@ -32,7 +34,9 @@ const skillCategories = [
       "Bike Frame Design",
       "Motion Capture",
       "Data Analysis",
-      "Technical Writing"
+      "Technical Writing",
+      "Tailscale",
+      "AdGuard"
     ]
   },
   {

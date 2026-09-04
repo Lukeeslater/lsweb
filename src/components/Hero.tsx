@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDownIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -41,8 +41,8 @@ export default function Hero() {
             LUKE SLATER
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">
-            Mechanical Engineer with a passion for innovative design and sustainable technology. 
-            Combining technical expertise with a love for outdoor sports to create solutions that enhance the adventure experience.
+            Mechanical Engineer at Leitner-Poma. Commissioning chairlifts in the field and exploring
+            software, AI tools, and computer systems.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center max-w-2xl mx-auto px-4 mb-16">
@@ -75,11 +75,7 @@ export default function Hero() {
             className="flex justify-center items-center"
           >
             <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-64}
-              duration={500}
+              to="/about"
               className="cursor-pointer bg-transparent p-2 rounded-full hover:bg-white/10 transition-all duration-300"
             >
               <ArrowDownIcon className="h-8 w-8 text-white animate-bounce" />

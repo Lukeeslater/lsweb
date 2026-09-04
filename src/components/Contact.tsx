@@ -60,7 +60,7 @@ export default function Contact() {
             <div className="mb-8 p-6 bg-gray-800/30 rounded-xl border border-white/5">
               <p className="text-gray-400 mb-4">Please verify you're human to see contact information:</p>
               <form onSubmit={handleVerification} className="flex flex-col space-y-2">
-                <p className="text-gray-300">Which mountain do I ski at? (Hint: Check the About section)</p>
+                <p className="text-gray-300">Which mountain do I ski at? (Hint: Check the About page)</p>
                 <div className="flex space-x-2">
                   <input
                     type="text"
