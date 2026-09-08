@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { name: 'HOME', path: '/' },
-  { name: 'ABOUT', path: '/about' },
+  { name: 'SERVICES', path: '/services' },
   { name: 'PROJECTS', path: '/projects' },
-  { name: 'LEADERSHIP', path: '/leadership' },
+  { name: 'ABOUT', path: '/about' },
   { name: 'CONTACT', path: '/contact' },
 ];
 
@@ -55,7 +55,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden sm:flex sm:items-center sm:space-x-10">
+          <div className="hidden md:flex md:items-center md:space-x-8 lg:space-x-10">
             {navItems.map((item) => (
               <NavLink key={item.path} to={item.path} end={item.path === '/'} className={linkClass}>
                 {item.name}
@@ -63,7 +63,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center sm:hidden">
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-gray-300 transition-colors"
@@ -81,7 +81,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="sm:hidden bg-black/95 backdrop-blur-sm"
+            className="md:hidden bg-black/95 backdrop-blur-sm"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (

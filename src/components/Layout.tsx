@@ -12,6 +12,7 @@ export default function Layout() {
       <footer className="bg-primary text-white py-8">
         <div className="section-container text-center">
           <p className="text-white/90">© {new Date().getFullYear()} Luke Slater. All rights reserved.</p>
+          <p className="text-white/60 text-sm mt-2">Freelance technical and design support — not PE consulting.</p>
         </div>
       </footer>
     </>

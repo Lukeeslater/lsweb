@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Leadership from './components/Leadership';
 import Contact from './components/Contact';
+import Services from './components/Services';
 
 function ScrollManager() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <Services preview />
       <Projects featured />
     </>
   );
@@ -43,6 +45,7 @@ function AboutPage() {
     <div className="pt-8">
       <About />
       <Skills />
+      <Leadership />
     </div>
   );
 }
@@ -55,10 +58,11 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<div className="pt-8"><Services /></div>} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<div className="pt-8"><Projects /></div>} />
-            <Route path="/leadership" element={<div className="pt-8"><Leadership /></div>} />
             <Route path="/contact" element={<div className="pt-8"><Contact /></div>} />
+            <Route path="/leadership" element={<Navigate to="/about" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
