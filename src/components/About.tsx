@@ -18,7 +18,6 @@ const currentFocus = [
   "Chairlift commissioning, terminal alignment, and component testing",
   "AI-assisted development with Cursor and a growing focus on computer systems",
   "Stepping into management and more responsible roles",
-  "Available for small CAD, automation, and data-analysis projects",
 ];
 
 export default function About() {
@@ -65,8 +64,7 @@ export default function About() {
             <p className="text-xl text-gray-300 leading-relaxed tracking-wide">
               My passions now sit at the intersection of mechanical systems and software: using optimization tools like Cursor
               to power AI-assisted development, and going deeper into computer systems. I am also seeking out the management
-              side of the work so I can step into more responsible roles. On the side I take on small CAD, automation, and
-              data-analysis projects for shops, startups, and inventors who don't need another full-time engineer.
+              side of the work so I can step into more responsible roles.
             </p>
             <p className="text-xl text-gray-300 leading-relaxed tracking-wide">
               Beyond engineering, I'm an avid mountain biker who represented my college at the 2024 Downhill Nationals, and a passionate skier
