@@ -8,10 +8,7 @@ const leadershipRoles = [
     location: "Grand Junction, CO",
     period: "Jun. 2025 - Present",
     responsibilities: [
-      "Commission chairlift terminals, including alignment, hydraulics, and field troubleshooting",
-      "Support non-destructive testing of critical lift components to code requirements",
-      "Approach each project and issue with humility and encourage collaboration across the crew",
-      "Building toward management and more responsible project roles"
+      "Even as a newer employee, focus on growing an environment that allows a free exchange of ideas and improves communication between engineering and manufacturing"
     ]
   },
   {
@@ -164,4 +161,4 @@ export default function Leadership() {
       </div>
     </section>
   );
-} 
+}
